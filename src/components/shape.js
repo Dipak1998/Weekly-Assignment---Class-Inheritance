@@ -16,4 +16,4 @@ class Shape{
         return arae;
     }
 }
-export default Shape;
+exports.Shape =Shape;
