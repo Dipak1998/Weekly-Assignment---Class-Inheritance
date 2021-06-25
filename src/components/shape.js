@@ -1,19 +1,29 @@
 // declare class
 
 // export class using module.exports
-class Shape{
-    constructor(a,b){
-        this.base = a;
-        this.height = b;
-    }
-    drawShape(color){
-        var color = 'red';
-        return color;
-        
-    }
-    calculateArea(){
-        var arae = base * height;
-        return arae;
-    }
+
+import React from 'react'
+
+module.exports = class Shape extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { color: 'red' }
+  }
+  drawShape() {
+    return 'Shape'
+  }
+  calculateArea() {
+    return 'Area'
+  }
+  color() {
+    return 'Color'
+  }
+  render() {
+    return (
+      <div>
+        Area:{this.calculateArea()} shape:{this.drawShape()} color:
+        {this.color()}
+      </div>
+    )
+  }
 }
-exports.Shape =Shape;
